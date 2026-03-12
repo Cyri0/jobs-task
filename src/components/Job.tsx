@@ -19,7 +19,7 @@ const Job = (props: JobType) => {
   const tags:string[] = [props.role, props.level, ...props.languages, ...props.tools]
 
   return (
-    <div className="jobCard">
+    <div className={"jobCard" + (props.featured ? " featuredBorder" : "")}>
         <div className="logo">
             <img src={props.logo} alt={props.company} />
         </div>

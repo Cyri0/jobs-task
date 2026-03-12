@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
-
 :root {
   --layout-mobile-width: 375px;
   --layout-desktop-width: 1440px;
@@ -16,4 +15,88 @@
   --font-family-heading: 'League Spartan', sans-serif;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
+}
+
+*{
+  font-family: var(--font-family-heading);
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--color-neutral-50);
+}
+
+.featuredBorder{
+    border-left: 5px solid var(--color-primary-400);
+}
+
+.jobCard{
+  box-shadow: 0px 5px 5px var(--color-neutral-400);
+  display: grid;
+  grid-template-columns: auto 1.5fr 2fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+
+  strong{
+    color: var(--color-primary-400);
+    font-size: 1.2rem;
+  }
+  .new{ background: var(--color-primary-400); }
+
+  .featured{ background: var(--color-neutral-900);}
+
+  .new, .featured{
+    padding: 5px 10px;
+    color: white;
+    border-radius: 20px;
+    margin-left: 10px;
+  }
+
+  .details>div{
+    display: flex;
+    gap: 20px;
+    color: var(--color-neutral-400)
+  }
+
+  .tags{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    button{
+      color: var(--color-primary-400);
+      font-weight: 800;
+      background: var(--color-neutral-50);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .jobCard{
+    grid-template-columns: 1fr;
+    .logo{
+      display: flex;
+      justify-content: center;
+    }
+    .details{
+      text-align: center;
+      >div{
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .tags{
+      justify-content: center;
+    }
+  }
 }
