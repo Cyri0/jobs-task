@@ -61,9 +61,29 @@ body{
   .details>div{
     display: flex;
     gap: 20px;
-    color: var(--color-neutral-400)
-  }
+    color: var(--color-neutral-400);
+    
+    span{
+      position: relative;
+    }
+    
+    span::before{
+      content: "";
+      position: absolute;
+      transform: translate(0%, -50%);
+      top: 40%;
+      left: -10px;
+      width: 5px;
+      aspect-ratio: 1 /1 ;
+      background: var(--color-neutral-400);
+      border-radius: 50%;
+    }
 
+    span:nth-child(1)::before{
+      display: none;
+    }
+  }
+  
   .tags{
     display: flex;
     justify-content: flex-end;
